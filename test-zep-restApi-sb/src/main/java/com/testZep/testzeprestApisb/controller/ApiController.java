@@ -24,9 +24,9 @@ public class ApiController {
     public String save(@ModelAttribute PlayerDTO playerDTO) {
         int saveResult = playerService.save(playerDTO);
         if (saveResult > 0) {
-            return "/api/test";
+            return "ok";
         } else {
-            return "/api/save";
+            return "again";
         }
     }
 
